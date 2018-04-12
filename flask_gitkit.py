@@ -133,8 +133,8 @@ def account_to_dict(account):
 def account_from_dict(dict_):
     return {
         'localId': dict_['id'],
-        'email': dict_['email'],
-        'emailVerified': dict_['email_verified'],
+        'email': dict_.get('email'),
+        'emailVerified': dict_.get('email_verified'),
         'displayName': dict_.get('name'),
         'passwordHash': dict_.get('password_hash'),
         'salt': dict_.get('salt'),
@@ -144,7 +144,7 @@ def account_from_dict(dict_):
 def provider_to_dict(provider):
     return {
         'provider': provider['providerId'],
-        'email': provider['email'],
+        'email': provider.get('email'),
         'name': provider.get('displayName'),
         'raw_id': provider['rawId'],
         'federatedId': provider['federatedId'],
