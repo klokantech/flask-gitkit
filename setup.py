@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Gitkit',
-    version='1.0',
+    version='1.1',
     description='Google Identity Toolkit integration for Flask',
     py_modules=['flask_gitkit'],
     install_requires=[
